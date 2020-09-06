@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar'
-import React, { useState } from 'react'
+import {StatusBar} from 'expo-status-bar'
+import React, {useState} from 'react'
 import {
   StyleSheet,
   Text,
@@ -12,13 +12,16 @@ export default function App() {
     top: 0,
     bottom: 0,
   })
+  console.log({...counter})
 
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
 
       <Text>michalo-prog</Text>
-      <Text>Counter: {counter}</Text>
+      <Text>Counter Top: {counter.top}</Text>
+      <Text>Counter Bottom: {counter.bottom}</Text>
+
       <Button
         title="Increase top number"
         onPress={() => setCounter({
