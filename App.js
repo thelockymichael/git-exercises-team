@@ -8,17 +8,31 @@ import {
 } from 'react-native'
 
 export default function App() {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState({
+    top: 0,
+    bottom: 0,
+  })
 
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
 
       <Text>michalo-prog</Text>
-      <Text>Counter: {counter}</Text>
+      <Text>Top Counter: {counter.top}</Text>
+      <Text>BottomCounter: {counter.bottom}</Text>
       <Button
-        title="Increase number"
-        onPress={() => setCounter(counter + 1)}
+        title="Increase top number"
+        onPress={() => setCounter({
+          ...counter,
+          top: counter.top + 1,
+        })}
+      />
+      <Button
+        title="Increase bottom number"
+        onPress={() => setCounter({
+          ...counter,
+          bottom: counter.bottom + 1,
+        })}
       />
       <StatusBar style="auto" />
     </View>
