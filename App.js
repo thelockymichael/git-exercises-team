@@ -18,8 +18,7 @@ export default function App() {
       <Text>Open up App.js to start working on your app!</Text>
 
       <Text>michalo-prog</Text>
-      <Text>Top Counter: {counter.top}</Text>
-      <Text>BottomCounter: {counter.bottom}</Text>
+      <Text>Counter: {counter}</Text>
       <Button
         title="Increase top number"
         onPress={() => setCounter({
