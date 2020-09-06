@@ -14,6 +14,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
 
+      <Text>unity.sys</Text>
       <Text>Counter: {counter}</Text>
       <Button
         title="Increase number"
